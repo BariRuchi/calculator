@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+<style>
+body{
+    text-align:center;
+    padding-top:200px;
+}
+table{
+    text-shadow : 5px;
+    display: inline-block;
+    /*background-color:rgb(58,58,58);*/
+    background:linear-gradient(0deg,rgb(7,5,7),rgb(58,58,58),rgb(181,166,179));
+}
+input{
+    background-color:rgb(147,147,147);
+    
+	
+}
+#number{
+background-color:white;
+}
+
+</style>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<title>my calculator layout</title>
+</head>
+<body>
+<table border="8"  cellspacing="6">
+<form name="cal">
+<tr>
+ <th  colspan="4"><input type="text" name="display" id="number"></th>
+</tr>
+<tr>
+<div class="operation">
+<th><input type=button value="+" onclick="cal.display.value += '+'"></th>
+<th><input type=button value="-" onclick="cal.display.value += '-'"></th>
+<th><input type=button value="*" onclick="cal.display.value += '*'"></th>
+<th><input type=button value="/" onclick="cal.display.value += '/'"></th>
+</tr>
+<div class="first">
+<tr>
+<th><input type=button value="1" onclick="cal.display.value += '1'"></th>
+<th><input type=button value="2" onclick="cal.display.value += '2'"></th>
+<th><input type=button value="3" onclick="cal.display.value += '3'"></th>
+<th><input type=button value="4" onclick="cal.display.value += '4'"></th>
+</tr>
+
+<tr>
+<th><input type=button value="5" onclick="cal.display.value += '5'"></th>
+<th><input type=button value="6" onclick="cal.display.value += '6'"></th>
+<th><input type=button value="7" onclick="cal.display.value += '7'"></th>
+<th><input type=button value="8" onclick="cal.display.value += '8'"></th>
+</tr>
+
+<tr>
+<th><input type=button value="9" onclick="cal.display.value += '9'"></th>
+<th><input type=button value="0" onclick="cal.display.value += '0'"></th>
+<span class="result">
+<th colspan="2"><input type=button value="=" onclick="cal.display.value = eval(cal.display.value)"></th>
+</span>
+</tr>
+</div>
+
+
+<tr>
+<th colspan="4"><button>clear</button></th>
+</tr>
+
+</table>
+</body>
